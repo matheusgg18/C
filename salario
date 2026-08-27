@@ -17,3 +17,24 @@ int main()
         else printf("nao vai rolar amigo");
     return 0;
 }
+
+
+int main()
+{
+    float media,cargahoraria, faltas, percentualfaltas
+    printf("sistema academico")
+
+    printf( "infome a media do aluno: ")
+    scanf("%f", &media);
+    printf("infome a carga horaria (numero de aulas):");
+    scanf("%f", &cargahoraria);
+    printf("infome o numero de faltas: ");
+    scanf("%f", &faltas);
+
+    percentualfaltas = (faltas / cargahoraria) * 100;
+
+    printf ("\n --- resultado --- \n");
+    printf ( "media: %.2", media);
+    print ("percentual de faltas: %.2\n", percentualfaltas);
+
+    if (media
