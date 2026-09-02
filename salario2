@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int main()
+{
+    //Declaração das variaveis
+    char nome[100];
+    char endereco[150];
+    char sexo;
+    char cidade[50];
+    char estado[50];
+    int idade;
+    float salarioBruto, salarioLiquido, ValeTranporte, ValeAlimentacao, PlanoSaude;
+    printf("**** Sistema de cauculo de salario ****\n\n");
+    // capitura das informações
+    printf("Nome....: ");
+    scanf(" %[^\n]", nome);
+    printf("endereco....: ");
+    scanf(" %[^\n]", endereco);
+    printf("cidade....: ");
+    scanf(" %[^\n]", cidade);
+    printf("estado....: ");
+    scanf(" %[^\n]", estado);
+    printf("sexo....: ");
+    scanf(" %c", &sexo);
+    printf("idade....: ");
+    scanf(" %d", &idade);
+    printf("salarioBruto....: ");
+    scanf(" %f", &salarioBruto);
+    // Processamento
+    ValeTranporte   = salarioBruto * 0.02;
+    ValeAlimentacao = salarioBruto * 0.05;
+    PlanoSaude      = salarioBruto * 0.10;
+    salarioLiquido = salarioBruto - ValeTranporte - ValeAlimentacao - PlanoSaude;
+    // mostrando o resultado 
+    printf("\n************** Salario Liquido **************\n");
+    printf("nome.......................: %s\n", nome );
+    printf("\nsalario Bruto..............: %.2f", salarioBruto );
+    printf("\n(-) Vale Tranporte.........: %.2f", ValeTranporte );
+    printf("\n(-) Vale Alimentacao.......: %.2f", ValeAlimentacao );
+    printf("\n(-) Plano Saude............: %.2f", PlanoSaude );
+    printf("\n(-) salario Liquido........: %.2f", salarioLiquido );
+    
+
+
+    return 0;
+}
